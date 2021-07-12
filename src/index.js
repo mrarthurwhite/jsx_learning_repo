@@ -25,6 +25,7 @@ const element = (
   </h1>
 );
 
+// React DOM is a renderer for React that was split off from the main React library to better separate concerns; it handles rendering components to the DOM or to a string for server-side rendering.
 ReactDOM.render(
   element,
   document.getElementById('root')
