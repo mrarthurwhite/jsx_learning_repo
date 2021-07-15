@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM, { render } from 'react-dom';
 
-const root = document.getElementById('root');
+function Hello(props) {
+  return <h3>Hello, {props.fullname}!</h3>;
+}
 
-const txt= React.createElement('h3', {}, "Please email me");
-const email_me= React.createElement('a', {href: 'mailto:arthur@avalon.com'},txt);
+const hello = <Hello fullname="Arthur W" />;
 
-// React DOM is a renderer for React that was split off from the main React library to better separate concerns; it handles rendering components to the DOM or to a string for server-side rendering.
 ReactDOM.render(
-  email_me,
-  root
+  hello,
+  document.getElementById('root')
 );
+
